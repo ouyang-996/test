@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package go.mirco.api.hellworld;
+
+service Hellworld {
+    rpc Callme(Request) returns (Response) {}
+    rpc Take(Request) returns (Response) {}
+}
+
+message Request {
+    string name = 1;
+}
+
+message Response {
+    string msg = 2;
+}
