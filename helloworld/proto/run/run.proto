@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package run;
+
+service Run {
+    rpc Gorun(Runrequest) returns(Runresponse){}
+}
+
+message Runrequest {
+    string tag = 1;
+}
+
+message Runresponse {
+    string msg = 1;
+}

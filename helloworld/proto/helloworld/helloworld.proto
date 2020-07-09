@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package helloworld;
+
+service Helloworld {
+    rpc Callme(Request) returns (Response) {}
+    rpc Take(Request) returns (Response) {}
+}
+
+message Request {
+    string name = 1;
+    string method = 2;
+}
+
+message Response {
+    string msg = 2;
+}
