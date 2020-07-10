@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package msg;
+
+service MsgService {
+    rpc Hello(HelloRequest) returns(HelloResponse){}
+    rpc Monming(MonmingRequest) returns(MonmingResponse){}
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message MonmingRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string data = 1;
+}
+
+message MonmingResponse {
+    string data = 1;
+}
